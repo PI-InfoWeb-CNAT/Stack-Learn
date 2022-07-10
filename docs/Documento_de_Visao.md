@@ -6,6 +6,7 @@ Documento de visão
 
 |  Data  | Versão | Descrição | Autor |
 |:-------|:-------|:----------|:------|
+| 26/05/2022 | **1.00** | Versão Inicial  | Elízia Regina, Matheus Henrique, Pedro Varela, Raquel Garcia, Ramon Oliveira, Vinícius César |
 | 10/07/2022 | **2.00** | Versão Inicial  | Elizia Regina, Matheus Henrique, Pedro Varela, Raquel Garcia, Ramon Oliveira, Vinícius César |
 
 ## 1. Objetivo do Projeto 
