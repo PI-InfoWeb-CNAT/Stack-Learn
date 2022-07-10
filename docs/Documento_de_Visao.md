@@ -80,7 +80,7 @@ Esse projeto consiste em um site voltado para uma empresa de cursos online, com 
 | F15	| Verificar o andamento do curso	| Os alunos podem acompanhar o quanto do curso já fizeram, por exemplo, 50% de inglês e 25% de espanhol.
 | F16	| Avaliar/Comentar o curso	| Os alunos podem avaliar os produtos realizando um comentário e atribuindo uma nota.
 | F17    | Deixar dúvidas para os professores e outros alunos| Enquanto tiverem cursos comprados, os clientes terão um ambiente de fórum para deixarem suas dúvidas.
-| F18    | Realizar dúvidas | Os alunos e professores terão como responder as dúvidas no ambiente de fórum.
+| F18    | Responder dúvidas | Os alunos e professores terão como responder as dúvidas no ambiente de fórum.
 | F19 	| Revisar dados cadastrais	| Os alunos podem alterar seus dados cadastrais permitindo assim que façam, por exemplo, alteração de dados de pagamento.
 | F20	| Realizar o cadastro e login no site professor | O professor vai se cadastrar e após deixar todos os dados necessários, a empresa vai contatá-lo pelo email deixado, de forma a começar, fora da plataforma, o processo de aprovar, ou não, o curso desejado. 
 | | | | 
