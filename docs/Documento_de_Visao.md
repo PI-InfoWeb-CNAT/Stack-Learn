@@ -8,6 +8,7 @@ Documento de visão
 |:-------|:-------|:----------|:------|
 | 26/05/2022 | **1.00** | Versão Inicial  | Elízia Regina, Matheus Henrique, Pedro Varela, Raquel Garcia, Ramon Oliveira, Vinícius César |
 | 10/07/2022 | **2.00** | Versão Inicial  | Elizia Regina, Matheus Henrique, Pedro Varela, Raquel Garcia, Ramon Oliveira, Vinícius César |
+| 16/10/2022 | **2.01** | Versão Inicial  | Raquel Garcia, Vinícius César |
 
 ## 1. Objetivo do Projeto 
 Este projeto tem objetivo de desenvolver um site voltado para venda de cursos online da empresa Stack, assim como visualização dos conteúdos das aulas, e interação com os seus respectivos professores.
@@ -26,10 +27,10 @@ Este projeto tem objetivo de desenvolver um site voltado para venda de cursos on
 
 | Nome | Descrição | Responsabilidades |
 |:- |:- |:- |
-| Administrador  | Gestor da plataforma; Usuário responsável pelo monitoramento dos processos que irão permitir que os clientes/alunos adquiram os cursos e que os professores possam disponibilizar os seus materiais. | Cadastrar e fazer a moderação dos cursos que poderão entrar na plataforma futuramente, de forma a perceber se ferem as diretrizes da plataforma; Disponibilizar ou bloquear a apresentação do curso na plataforma; Registrar informação de controle de pagamento de pedidos; Gerenciar os tópicos e mensagens no fórum; Cadastrar, e excluir se for necessário, alunos e professores. |
+| Administrador  | Gestor da plataforma; Usuário responsável pelo monitoramento dos processos que irão permitir que os clientes/alunos adquiram os cursos e que os professores possam disponibilizar os seus materiais. | Cadastrar e fazer a moderação dos cursos que poderão entrar na plataforma futuramente, de forma a perceber se ferem as diretrizes da plataforma; Disponibilizar ou bloquear a apresentação do curso na plataforma; Registrar informação de controle de pagamento de pedidos; Cadastrar, e excluir se for necessário, alunos e professores. |
 | Usuário | Usuário que visualiza o site; O usuário deve ter a possibilidade de obter informações acerca dos cursos, preços, avaliações dos alunos que já adquiriram o curso e informações do(s) professor(es) sem a necessidade de registrar suas informações cadastrais no site. | O usuário poderá pesquisar os cursos por nome, filtrar por preço e por categorias(ENEM, Vestibulares, OAB, etc); Será possível montar um carrinho de compras com os cursos desejados, porém não será permitido comprar, pois é necessária uma conta;  Deverá ser capaz de visualizar o plano e suas principais informações, como preço e benefícios; Poderá se registrar como aluno ou professor. |
-| Aluno | Usuário cadastrado como estudante; O usuário, após realizar seu cadastro no site, poderá realizar compras e estudar. | Após a inclusão de dados cadastrais tais como, nome de usuário, senha, nome completo, email e CPF, o usuário passa a ser visto como cliente e poderá registrar seus pedidos. Os pedidos poderão ser compostos por um ou mais cursos. O valor total do pedido deve ser apresentado. O cliente deve ter acesso às seguintes funcionalidades no site: Alterar seus dados cadastrais; Visualizar o histórico de cursos comprados, desde os terminados, como os em andamento; Visualizar o progresso nos cursos em andamento; Cancelar a compra do curso e pedir reembolso; Avaliar em quantidade de estrelas e comentar sobre os cursos; Tirar dúvidas no fórum a fim de professores ou outros alunos responderem.|
-| Professor | Usuário cadastrado como docente; O usuário realizará o cadastro de autorização, poderá ter controle dos cursos criados além de usufruir do fórum. | Em primeira via, para ser considerado um professor oficial da Stack Learn, deverá apresentar dados cadastrais como: nome de usuário, senha, nome completo, email, CPF,  endereço e CEP. Já em cadastros cotidianos apenas o login e senha serão pedidos. Além disso, ele poderá visualizar e responder os tópicos no fórum. |
+| Aluno | Usuário cadastrado como estudante; O usuário, após realizar seu cadastro no site, poderá realizar compras e estudar. | Após a inclusão de dados cadastrais tais como, nome de usuário, senha, nome completo, email e CPF, o usuário passa a ser visto como cliente e poderá registrar seus pedidos. Os pedidos poderão ser compostos por um ou mais cursos. O valor total do pedido deve ser apresentado. O cliente deve ter acesso às seguintes funcionalidades no site: Alterar seus dados cadastrais; Visualizar o histórico de cursos comprados, desde os terminados, como os em andamento; Visualizar o progresso nos cursos em andamento; Cancelar a compra do curso e pedir reembolso; Avaliar em quantidade de estrelas e comentar sobre os cursos.|
+| Professor | Usuário cadastrado como docente; O usuário realizará o cadastro de autorização, poderá ter controle dos cursos criados. | Em primeira via, para ser considerado um professor oficial da Stack Learn, deverá apresentar dados cadastrais como: nome de usuário, senha, nome completo, email, CPF,  endereço e CEP. Já em cadastros cotidianos apenas o login e senha serão pedidos. |
  
 ## 4. Descrição do ambiente dos usuários
  
@@ -61,29 +62,25 @@ Esse projeto consiste em um site voltado para uma empresa de cursos online, com 
 
 ## 8.	Requisitos funcionais
 
-
 | Código | Nome | Descrição |
 |:---  |:--- |:--- |
- | F01	| Adicionar, remover ou alterar cursos | O administrador tem à sua disponibilidade a função de adicionar, remover ou alterar cursos comercializados no site estabelecendo ainda seus preços de venda.
-| F02   | Adicionar, remover ou alterar professores | O administrador tem à sua disponibilidade a função de adicionar, remover ou alterar professores, gerenciando também suas respostas aos alunos e materiais adicionais que foram colocados.
-| F03   | Adicionar, remover ou alterar alunos | O administrador tem à sua disponibilidade a função de adicionar, remover ou alterar alunos. Administrando também algum problema na plataforma ou no curso citado pelo aluno.
-| F04	| Adicionar, remover ou alterar categorias de cursos. | O administrador tem à sua disponibilidade a função de adicionar, remover ou alterar grupos de cursos comercializados na plataforma.
-| F05	| Adicionar, remover ou alterar professor do curso. | O administrador tem à sua disponibilidade a função de adicionar, remover ou alterar o professor do cursos comercializados no site.
-| F06	| Disponibilizar ou bloquear a apresentação do curso no site de venda | O administrador tem à sua disponibilidade a função de liberar ou bloquear a apresentação de cursos. Além de possíveis atualizações de materiais ou aulas adicionais.
-| F07	| Registrar  recebimento do pagamento do cliente | O administrador registra no site a identificação do recebimento do pagamento realizado pelo cliente liberando o curso para o aluno.
-| F08	| Visualizar cursos	| O usuário visualiza os cursos disponíveis filtrando por preços, áreas, assuntos ou através de um trecho do nome do curso.
-| F09	| Adicionar ou remover cursos ao carrinho de compras	| O cliente/aluno  pode escolher mais de um curso para realizar a compra e inserir em um carrinho de compras.
-| F10	| Realizar o cadastro e login no site cliente/aluno	| O usuário pode se cadastrar no site como aluno para poder comprar cursos e acessar diversas funcionalidades.
-| F11	| Realizar a compra de um curso	| Os alunos podem confirmar a compra dos cursos adicionados em seu carrinho de compras gerando assim um pedido. 
-| F12	| Realizar a compra de uma assinatura	| Os alunos podem fazer a assinatura do plano mensal e assim ter disponível todos os cursos, ao pagar o valor todo mês.
-| F13	| Realizar o cancelamento de quaisquer curso solicitado	| Os alunos podem solicitar o cancelamento de uma compra realizada desde que ainda não tenham se passado 7 dias do momento da compra e mais de 20% do progresso.
-| F14	| Verificar as compras realizadas	| Os alunos podem verificar seu histórico de compras na loja.
-| F15	| Verificar o andamento do curso	| Os alunos podem acompanhar o quanto do curso já fizeram, por exemplo, 50% de inglês e 25% de espanhol.
-| F16	| Avaliar/Comentar o curso	| Os alunos podem avaliar os produtos realizando um comentário e atribuindo uma nota.
-| F17    | Deixar dúvidas para os professores e outros alunos| Enquanto tiverem cursos comprados, os clientes terão um ambiente de fórum para deixarem suas dúvidas.
-| F18    | Responder dúvidas | Os alunos e professores terão como responder as dúvidas no ambiente de fórum.
-| F19 	| Revisar dados cadastrais	| Os alunos podem alterar seus dados cadastrais permitindo assim que façam, por exemplo, alteração de dados de pagamento.
-| F20	| Realizar o cadastro e login no site professor | O professor vai se cadastrar e após deixar todos os dados necessários, a empresa vai contatá-lo pelo email deixado, de forma a começar, fora da plataforma, o processo de aprovar, ou não, o curso desejado. 
+ | F01	| Adicionar, remover ou alterar cursos | O administrador tem à sua disponibilidade a função de adicionar, remover ou alterar cursos comercializados no site estabelecendo ainda seus preços de venda, além de liberar ou bloquear a apresentação de cursos.
+| F02	| Adicionar, remover ou alterar categorias de cursos. | O administrador tem à sua disponibilidade a função de adicionar, remover ou alterar grupos de cursos comercializados na plataforma.
+| F03   | Remover professores | O administrador tem à sua disponibilidade a função de remover professores os quais infringirem alguma diretriz.
+| F04   | Remover alunos | O administrador tem à sua disponibilidade a função de remover alunos os quais infringirem alguma diretriz.
+| F05	| Registrar  recebimento do pagamento do cliente | O administrador registra no site a identificação do recebimento do pagamento realizado pelo cliente liberando o curso para o aluno.
+| F06	| Visualizar cursos	| O usuário visualiza os cursos disponíveis filtrando por preços, áreas ou através de um trecho do nome do curso.
+| F07	| Adicionar ou remover cursos ao carrinho de compras	| O cliente/aluno  pode escolher mais de um curso para realizar a compra e inserir em um carrinho de compras.
+| F8	| Realizar o cadastro e login no site cliente/aluno	| O usuário pode se cadastrar no site como aluno para poder comprar cursos e acessar diversas funcionalidades.
+| F9	| Realizar a compra de um curso	| Os alunos podem confirmar a compra dos cursos adicionados em seu carrinho de compras gerando assim um pedido. 
+| F10	| Realizar a compra de uma assinatura	| Os alunos podem fazer a assinatura do plano mensal e assim ter disponível todos os cursos, ao pagar o valor todo mês.
+| F11	| Realizar o cancelamento de quaisquer curso solicitado	| Os alunos podem solicitar o cancelamento de uma compra realizada, recebendo reembolso.
+| F12	| Verificar as compras realizadas	| Os alunos podem verificar seu histórico de compras na loja.
+| F13	| Verificar o andamento do curso	| Os alunos podem acompanhar o quanto do curso já fizeram, por exemplo, 50% de inglês e 25% de espanhol.
+| F14	| Avaliar/Comentar o curso	| Os alunos podem avaliar os produtos realizando um comentário e atribuindo uma nota.
+| F15 	| Revisar dados cadastrais alunos	| Os alunos podem alterar seus dados cadastrais permitindo assim que façam, por exemplo, alteração de dados de pagamento.
+| F16 	| Revisar dados cadastrais professores	| Os professores podem alterar seus dados cadastrais permitindo assim que façam, por exemplo, alteração de dados da conta.
+| F17	| Realizar o cadastro e login no site professor | O professor vai se cadastrar e após deixar todos os dados necessários, a empresa vai contatá-lo pelo email deixado, de forma a começar, fora da plataforma, o processo de aprovação, ou não, o curso desejado. 
 | | | | 
 
 ## 9.	Requisitos não-funcionais
