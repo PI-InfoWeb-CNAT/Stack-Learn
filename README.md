@@ -9,7 +9,7 @@ Esse projeto consiste em um site voltado para uma empresa de cursos online, cham
 * [Diagrama de casos de uso](./docs/imagens/Diagrama_de_casos_de_uso.png)
 * [Mapa do Site](./docs/imagens/Mapa_do_site.png)
 * [Protótipos](./docs/PrototiposSite/)
-* [Protótipos Figma]([https://www.figma.com/file/1BnGmmb2nMmWe8VKXrpZ86/PROJETO-PROZA?node-id=0%3A1](https://www.figma.com/proto/C0ejgynYKpfcMSFLk3SurC/layout?node-id=194%3A359&scaling=scale-down-width&page-id=113%3A60&starting-point-node-id=194%3A359&show-proto-sidebar=1)
+* [Protótipos Figma](https://www.figma.com/proto/C0ejgynYKpfcMSFLk3SurC/layout?node-id=194%3A359&scaling=scale-down-width&page-id=113%3A60&starting-point-node-id=194%3A359&show-proto-sidebar=1)
 
 * Diagrama de classes de domínio
 
