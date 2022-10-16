@@ -8,7 +8,7 @@ Documento de visão
 |:-------|:-------|:----------|:------|
 | 26/05/2022 | **1.00** | Versão Inicial  | Elízia Regina, Matheus Henrique, Pedro Varela, Raquel Garcia, Ramon Oliveira, Vinícius César |
 | 10/07/2022 | **2.00** | Versão Inicial  | Elizia Regina, Matheus Henrique, Pedro Varela, Raquel Garcia, Ramon Oliveira, Vinícius César |
-| 16/10/2022 | **2.01** | Versão Inicial  | Raquel Garcia, Vinícius César |
+| 16/10/2022 | **2.01** | Remoçao de fórum  | Raquel Garcia, Vinícius César |
 
 ## 1. Objetivo do Projeto 
 Este projeto tem objetivo de desenvolver um site voltado para venda de cursos online da empresa Stack, assim como visualização dos conteúdos das aulas, e interação com os seus respectivos professores.
