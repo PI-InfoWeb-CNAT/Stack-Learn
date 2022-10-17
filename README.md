@@ -7,7 +7,7 @@ Esse projeto consiste em um site voltado para uma empresa de cursos online, cham
 # Artefatos do Projeto
 * [Documento de visão](./docs/Documento_de_Visao.md)
 * [Diagrama de casos de uso](./docs/imagens/Diagrama_de_casos_de_uso.png)
-* [Mapa do Site](./docs/imagens/Mapa_do_site.png)
+* [Mapa do Site](./docs/imagens/mapa_site_stack_learm.png)
 * [Protótipos](./docs/PrototiposSite/)
 * [Protótipos Figma](https://www.figma.com/proto/C0ejgynYKpfcMSFLk3SurC/layout?node-id=194%3A359&scaling=scale-down-width&page-id=113%3A60&starting-point-node-id=194%3A359&show-proto-sidebar=1)
 
