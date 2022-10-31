@@ -5,9 +5,9 @@
 Esse projeto consiste em um site voltado para uma empresa de cursos online, chamada *Stack-Learn* com a venda de cursos em geral, voltados desde ENEM, idiomas, profissionalizantes, até vestibulares, possuindo um ambiente virtual acessível a todos os tipos de usuários e com intuito de facilitar cada vez mais o aprendizado das pessoas em diversas áreas.
 
 # Artefatos do Projeto
-* [Documento de visão](./docs/Documento_de_Visao.md)
-* [Diagrama de casos de uso](./docs/imagens/Diagrama_de_casos_de_uso.png)
-* [Mapa do Site](./docs/imagens/mapa_site_stack_learm.png)
+* [Documento de visão](https://github.com/PI-InfoWeb-CNAT/Stack-Learn/blob/main/docs/Documento_de_Visao.md)
+* [Diagrama de casos de uso](https://github.com/PI-InfoWeb-CNAT/Stack-Learn/blob/main/docs/imagens/casos_de_uso.png)
+* [Mapa do Site](https://github.com/PI-InfoWeb-CNAT/Stack-Learn/blob/main/docs/imagens/mapa_site_stack_learn.png)
 * [Protótipos](./docs/PrototiposSite/)
 * [Protótipos Figma](https://www.figma.com/proto/C0ejgynYKpfcMSFLk3SurC/layout?node-id=194%3A359&scaling=scale-down-width&page-id=113%3A60&starting-point-node-id=194%3A359&show-proto-sidebar=1)
 
