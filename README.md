@@ -16,7 +16,7 @@ Esse projeto consiste em um site voltado para uma empresa de cursos online, cham
 * Documento de Requisitos
 
 
-* Detalhamento de casos de uso 
+* Detalhamento de casos de uso | administrador
 
   1. [Gerenciar cursos](./docs/detalhamento_de_caso_de_uso/administrador/crud_cursos.md)
 
@@ -25,6 +25,12 @@ Esse projeto consiste em um site voltado para uma empresa de cursos online, cham
   3. [Remover alunos](./docs/detalhamento_de_caso_de_uso/administrador/remover_alunos.md)
   
   4. [Remover professores](./docs/detalhamento_de_caso_de_uso/administrador/remover_professores.md) 
+
+* Detalhamento de casos de uso | usuário sem login
+
+* Detalhamento de casos de uso | aluno
+
+* Detalhamento de casos de uso | professor 
 
 * [Diagrama de classes de domínio]
 
