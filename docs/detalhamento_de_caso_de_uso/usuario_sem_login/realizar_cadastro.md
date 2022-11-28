@@ -32,6 +32,6 @@ O usuário poderá usufruir dos serviços de professor, como ter controle dos cu
 
 #### 5.2 Fluxo de exceção passo 3 – dados não válidos
 Quando o usuário inserir CPF ou CEP com a quantidade de algarismos inferior, ou superior, ao necessário, uma mensagem de erro aparecerá e ele voltará ao passo 3.
-Mensagem1) “CPF não válido. Insira outro valor com mais/menos x algarismos.”
-Mensagem2) “CEP não válido. Insira outro valor com mais/menos x algarismos.”
-Mensagem3) “CPF e CEP não válidos. Insira outro valor.”
+#Mensagem1) “CPF não válido. Insira outro valor com mais/menos x algarismos.”
+#Mensagem2) “CEP não válido. Insira outro valor com mais/menos x algarismos.”
+#Mensagem3) “CPF e CEP não válidos. Insira outro valor.”
