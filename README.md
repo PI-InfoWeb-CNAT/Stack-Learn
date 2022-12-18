@@ -28,6 +28,10 @@ Esse projeto consiste em um site voltado para uma empresa de cursos online, cham
 
 * Detalhamento de casos de uso | usuário sem login
 
+  1. [Realizar cadastro](./docs/detalhamento_de_caso_de_uso/usuario_sem_login/realizar_cadastro.md)
+  
+  2. [Visualizar cursos](./docs/detalhamento_de_caso_de_uso/usuario_sem_login/visualizar_cursos.md)
+
 * Detalhamento de casos de uso | aluno
 
 * Detalhamento de casos de uso | professor 
