@@ -33,8 +33,16 @@ Esse projeto consiste em um site voltado para uma empresa de cursos online, cham
   2. [Visualizar cursos](./docs/detalhamento_de_caso_de_uso/usuario_sem_login/visualizar_cursos.md)
 
 * Detalhamento de casos de uso | aluno
+  
+  1. [Revisar dados cadastrais](./docs/detalhamento_de_caso_de_uso/aluno/revisar_dados_cadastrais.md)
+   
+  2. [Visualizar cursos](./docs/detalhamento_de_caso_de_uso/aluno/visualizar_cursos.md)
+   
+  3. [Realizar cadastro](./docs/detalhamento_de_caso_de_uso/usuario_sem_login/realizar_cadastro.md)
 
-* Detalhamento de casos de uso | professor 
+* Detalhamento de casos de uso | professor
+  
+  1. [Revisar dados cadastrais](./docs/detalhamento_de_caso_de_uso/aluno/revisar_dados_cadastrais.md) 
 
 * [Diagrama de classes de domínio]
 
