@@ -153,10 +153,40 @@
     <Content Include="Content\DataTables-1.10.2\swf\copy_csv_xls_pdf.swf" />
     <Content Include="Content\Site.css" />
     <Content Include="Css\Adm.css" />
+    <Content Include="Css\Cadastro.css" />
+    <Content Include="Css\CarrinhoPagamento.css" />
+    <Content Include="Css\HeaderFooter.css" />
     <Content Include="Css\LayAdm.css" />
+    <Content Include="Css\PaginasInternas.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Fts\art1.svg" />
+    <Content Include="Fts\cartao.svg" />
+    <Content Include="Fts\curso.png" />
+    <Content Include="Fts\curso2.png" />
+    <Content Include="Fts\Eye.svg" />
+    <Content Include="Fts\EyeSlash.svg" />
     <Content Include="Global.asax" />
     <Content Include="img\admfoto.svg" />
+    <Content Include="img\ART %281%29.png" />
+    <Content Include="img\ART.png" />
+    <Content Include="img\art1.svg" />
+    <Content Include="img\background1.svg" />
+    <Content Include="img\carrinho.png" />
+    <Content Include="img\carrinho.svg" />
+    <Content Include="img\cartao.svg" />
+    <Content Include="img\curso.png" />
+    <Content Include="img\curso2.png" />
+    <Content Include="img\Envelope.svg" />
+    <Content Include="img\estrela-cheia.svg" />
+    <Content Include="img\estrela-vazia.svg" />
+    <Content Include="img\Eye.svg" />
+    <Content Include="img\EyeSlash.svg" />
+    <Content Include="img\FacebookLogo.svg" />
+    <Content Include="img\foto-card.svg" />
+    <Content Include="img\foto_estudantefoto.svg" />
+    <Content Include="img\HandsClapping.svg" />
+    <Content Include="img\ImgAula.svg" />
+    <Content Include="img\InstagramLogo.svg" />
     <Content Include="img\logo2.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -169,6 +199,13 @@
     <Content Include="Content\DataTables-1.10.2\css\dataTables.responsive.scss" />
     <Content Include="Content\DataTables-1.10.2\css\dataTables.jqueryui.scss" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="img\logo_sem_palavras.svg" />
+    <Content Include="img\part time student.png" />
+    <Content Include="img\Phone.svg" />
+    <Content Include="img\TwitterLogo.svg" />
+    <Content Include="img\vetor-desenho-atras.svg" />
+    <Content Include="img\vetor-linha-atras.svg" />
+    <Content Include="img\WhatsappLogo.svg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\DataTables-1.10.2\dataTables.autoFill.js" />
@@ -196,22 +233,27 @@
     <Content Include="Scripts\DataTables-1.10.2\jquery.dataTables.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\scripts\script.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\EFContext.cs" />
     <Compile Include="Controllers\AlunosController.cs" />
+    <Compile Include="Controllers\AulasController.cs" />
+    <Compile Include="Controllers\AvaliacoesController.cs" />
     <Compile Include="Controllers\CategoriasController.cs" />
+    <Compile Include="Controllers\ConclusoesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PedidosController.cs" />
     <Compile Include="Controllers\ProfessoresController.cs" />
     <Compile Include="Controllers\CursosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Aluno.cs" />
-    <Compile Include="Models\Categoria.cs" />
-    <Compile Include="Models\Curso.cs" />
-    <Compile Include="Models\Professor.cs" />
+    <Compile Include="Models\AulaDetails.cs" />
+    <Compile Include="Models\CursoDetails.cs" />
+    <Compile Include="Models\MeusCursosIndex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +284,41 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Cursos\_PorProfessores.cshtml" />
     <Content Include="Views\Cursos\_PorCategorias.cshtml" />
+    <Content Include="Views\Aulas\Index.cshtml" />
+    <Content Include="Views\Aulas\Create.cshtml" />
+    <Content Include="Views\Aulas\Edit.cshtml" />
+    <Content Include="Views\Aulas\Details.cshtml" />
+    <Content Include="Views\Aulas\Delete.cshtml" />
+    <Content Include="Views\Alunos\Cadastro.cshtml" />
+    <Content Include="Views\Professores\Cadastro.cshtml" />
+    <Content Include="Views\Pedidos\Index.cshtml" />
+    <Content Include="Views\Home\PaginaInicial.cshtml" />
+    <Content Include="Views\Shared\_Header_Sem_Login.cshtml" />
+    <Content Include="Views\Shared\_Header_Aluno.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Cursos\Lista.cshtml" />
+    <Content Include="Views\Aulas\_ParaDetailsAula.cshtml" />
+    <Content Include="Views\Avaliacoes\_ParaDetailsAvaliacoes.cshtml" />
+    <Content Include="Views\Professores\_ParaDetailsProfessorees.cshtml" />
+    <Content Include="Views\Cursos\View.cshtml" />
+    <Content Include="Views\Cursos\View1.cshtml" />
+    <Content Include="Views\Aulas\AulaIndividual.cshtml" />
+    <Content Include="Views\Avaliacoes\Create.cshtml" />
+    <Content Include="Views\Avaliacoes\Edit.cshtml" />
+    <Content Include="Views\Avaliacoes\Delete.cshtml" />
+    <Content Include="Views\Avaliacoes\Index.cshtml" />
+    <Content Include="Views\Avaliacoes\Details.cshtml" />
+    <Content Include="Views\Alunos\_ParaDetailsAvaliacaoAluno.cshtml" />
+    <Content Include="Views\Cursos\MeusCursosIndex.cshtml" />
+    <Content Include="Views\Conclusoes\Index.cshtml" />
+    <Content Include="Views\Conclusoes\Create.cshtml" />
+    <Content Include="Views\Conclusoes\Edit.cshtml" />
+    <Content Include="Views\Conclusoes\Details.cshtml" />
+    <Content Include="Views\Conclusoes\Delete.cshtml" />
+    <Content Include="Views\Pedidos\CarrrinhoCompra.cshtml" />
+    <Content Include="Views\Pedidos\IndexCanalha.cshtml" />
+    <Content Include="Views\Pedidos\Create.cshtml" />
+    <Content Include="Views\Pedidos\_Carrinho_Curso.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -251,6 +328,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="fotos\" />
+    <Folder Include="public\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelos\Modelos.csproj">
+      <Project>{d2b50efa-89d6-4a0a-9a17-b72ce77da0df}</Project>
+      <Name>Modelos</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

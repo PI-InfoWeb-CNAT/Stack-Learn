@@ -6,7 +6,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Stack_Learn.Context;
-using Stack_Learn.Models;
+using Modelos.Models;
 
 namespace Stack_Learn.Controllers
 {
@@ -97,6 +97,20 @@ namespace Stack_Learn.Controllers
             context.Alunos.Remove(aluno);
             context.SaveChanges();
             TempData["Message"] = "Aluno(a) " + aluno.Nome.ToUpper() + " foi removido(a)";
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Cadastro()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Cadastro(Aluno aluno)
+        {
+            context.Alunos.Add(aluno);
+            context.SaveChanges();
             return RedirectToAction("Index");
         }
     }
