@@ -9,6 +9,7 @@ Documento de visão
 | 26/05/2022 | **1.00** | Versão Inicial  | Elízia Regina, Matheus Henrique, Pedro Varela, Raquel Garcia, Ramon Oliveira, Vinícius César |
 | 10/07/2022 | **2.00** | Versão Inicial  | Elizia Regina, Matheus Henrique, Pedro Varela, Raquel Garcia, Ramon Oliveira, Vinícius César |
 | 16/10/2022 | **2.01** | Remoçao de fórum  | Raquel Garcia, Vinícius César |
+| 23/01/2023 | **2.02** | Remoçao de casos de uso  | Raquel Garcia |
 
 ## 1. Objetivo do Projeto 
 Este projeto tem objetivo de desenvolver um site voltado para venda de cursos online da empresa Stack, assim como visualização dos conteúdos das aulas, e interação com os seus respectivos professores.
@@ -38,7 +39,7 @@ O comércio eletrônico tem quatro tipos de usuários. O tipo Administrador repr
 
 O Administrador acessará o site e fará a configuração dos produtos a serem vendidos, realizará o cadastro dos filiados e terá o controle sobre as vendas e comentários da plataforma. 
 
-O Cliente acessa o site utilizando um computador ou celular e visualizará os cursos vendidos na loja, assim como a assinatura disponível, podendo realizar a compra, se desejar. Ademais, existirão poucas restrições quanto ao ambiente, sendo apenas necessário o uso da internet e o login para efetuar a compra.
+O Cliente acessa o site utilizando um computador ou celular e visualizará os cursos vendidos na loja, podendo realizar a compra, se desejar. Ademais, existirão poucas restrições quanto ao ambiente, sendo apenas necessário o uso da internet e o login para efetuar a compra.
 
 O Aluno conseguirá fazer a compra dos cursos desejados, além de ter um ambiente virtual para ter o controle tanto dos cursos terminados, como de como estão aqueles ainda não terminados. Por fim, o Professor terá sua conta anterior de Aluno, em que após o cadastro no site, os donos da empresa vão conversarrvar com ele por email, aprovando ou não o projeto do professor. Desse modo, tendo um curso aprovado, poderá ajudar estudantes , respondendo algumas dúvidas e mandando desafios para que eles respondam, além de que observará os comentários positivos e negativos em relação ao seu curso, além de ver a classificação em quantidade de estrelas, que seu produto recebeu até o momento.
 
@@ -64,23 +65,19 @@ Esse projeto consiste em um site voltado para uma empresa de cursos online, com 
 
 | Código | Nome | Descrição |
 |:---  |:--- |:--- |
- | F01	| Adicionar, remover ou alterar cursos | O administrador tem à sua disponibilidade a função de adicionar, remover ou alterar cursos comercializados no site estabelecendo ainda seus preços de venda, além de liberar ou bloquear a apresentação de cursos.
+| F01	| Adicionar, remover ou alterar cursos | O administrador tem à sua disponibilidade a função de adicionar, remover ou alterar cursos comercializados no site estabelecendo ainda seus preços de venda, além de liberar ou bloquear a apresentação de cursos.
 | F02	| Adicionar, remover ou alterar categorias de cursos. | O administrador tem à sua disponibilidade a função de adicionar, remover ou alterar grupos de cursos comercializados na plataforma.
 | F03   | Remover professores | O administrador tem à sua disponibilidade a função de remover professores os quais infringirem alguma diretriz.
 | F04   | Remover alunos | O administrador tem à sua disponibilidade a função de remover alunos os quais infringirem alguma diretriz.
-| F05	| Registrar  recebimento do pagamento do cliente | O administrador registra no site a identificação do recebimento do pagamento realizado pelo cliente liberando o curso para o aluno.
-| F06	| Visualizar cursos	| O usuário visualiza os cursos disponíveis filtrando por preços, áreas ou através de um trecho do nome do curso.
-| F07	| Adicionar ou remover cursos ao carrinho de compras	| O cliente/aluno  pode escolher mais de um curso para realizar a compra e inserir em um carrinho de compras.
-| F8	| Realizar o cadastro e login no site cliente/aluno	| O usuário pode se cadastrar no site como aluno para poder comprar cursos e acessar diversas funcionalidades.
-| F9	| Realizar a compra de um curso	| Os alunos podem confirmar a compra dos cursos adicionados em seu carrinho de compras gerando assim um pedido. 
-| F10	| Realizar a compra de uma assinatura	| Os alunos podem fazer a assinatura do plano mensal e assim ter disponível todos os cursos, ao pagar o valor todo mês.
-| F11	| Realizar o cancelamento de quaisquer curso solicitado	| Os alunos podem solicitar o cancelamento de uma compra realizada, recebendo reembolso.
-| F12	| Verificar as compras realizadas	| Os alunos podem verificar seu histórico de compras na loja.
-| F13	| Verificar o andamento do curso	| Os alunos podem acompanhar o quanto do curso já fizeram, por exemplo, 50% de inglês e 25% de espanhol.
-| F14	| Avaliar/Comentar o curso	| Os alunos podem avaliar os produtos realizando um comentário e atribuindo uma nota.
-| F15 	| Revisar dados cadastrais alunos	| Os alunos podem alterar seus dados cadastrais permitindo assim que façam, por exemplo, alteração de dados de pagamento.
-| F16 	| Revisar dados cadastrais professores	| Os professores podem alterar seus dados cadastrais permitindo assim que façam, por exemplo, alteração de dados da conta.
-| F17	| Realizar o cadastro e login no site professor | O professor vai se cadastrar e após deixar todos os dados necessários, a empresa vai contatá-lo pelo email deixado, de forma a começar, fora da plataforma, o processo de aprovação, ou não, o curso desejado. 
+| F05	| Visualizar cursos	| O usuário visualiza os cursos disponíveis filtrando por preços, áreas ou através de um trecho do nome do curso.
+| F06	| Realizar o cadastro e login no site cliente/aluno	| O usuário pode se cadastrar no site como aluno para poder comprar cursos e acessar diversas funcionalidades.
+| F07	| Realizar a compra de um curso	| Os alunos podem confirmar a compra dos cursos adicionados em seu carrinho de compras gerando assim um pedido. 
+| F08	| Adicionar ou remover cursos ao carrinho de compras	| Os alunos podem escolher mais de um curso para realizar a compra e inserir em um carrinho de compras.
+| F09	| Verificar o andamento do curso	| Os alunos podem acompanhar o quanto do curso já fizeram, por exemplo, 50% de inglês e 25% de espanhol.
+| F10	| Avaliar/Comentar o curso	| Os alunos podem avaliar os produtos realizando um comentário e atribuindo uma nota.
+| F11 	| Revisar dados cadastrais alunos	| Os alunos podem alterar seus dados cadastrais permitindo assim que façam, por exemplo, alteração de dados de pagamento.
+| F12 	| Revisar dados cadastrais professores	| Os professores podem alterar seus dados cadastrais permitindo assim que façam, por exemplo, alteração de dados da conta.
+| F13	| Realizar o cadastro e login no site professor | O professor vai se cadastrar e após deixar todos os dados necessários, a empresa vai contatá-lo pelo email deixado, de forma a começar, fora da plataforma, o processo de aprovação, ou não, o curso desejado. 
 | | | | 
 
 ## 9.	Requisitos não-funcionais
