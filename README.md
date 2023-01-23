@@ -6,7 +6,7 @@ Esse projeto consiste em um site voltado para uma empresa de cursos online, cham
 
 # Artefatos do Projeto
 * [Documento de visão](https://github.com/PI-InfoWeb-CNAT/Stack-Learn/blob/main/docs/Documento_de_Visao.md)
-* [Diagrama de casos de uso](https://github.com/PI-InfoWeb-CNAT/Stack-Learn/blob/main/docs/imagens/casos_de_uso.png)
+* [Diagrama de casos de uso](https://github.com/PI-InfoWeb-CNAT/Stack-Learn/blob/main/docs/imagens/novo casos uso.png)
 * [Mapa do Site](https://github.com/PI-InfoWeb-CNAT/Stack-Learn/blob/main/docs/imagens/mapa_site_stack_learn.png)
 * [Protótipos](./docs/PrototiposSite/)
 * [Protótipos Figma](https://www.figma.com/proto/C0ejgynYKpfcMSFLk3SurC/layout?node-id=194%3A359&scaling=scale-down-width&page-id=113%3A60&starting-point-node-id=194%3A359&show-proto-sidebar=1)
