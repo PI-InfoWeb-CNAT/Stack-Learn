@@ -2,7 +2,7 @@
 
 @{
     long x = Model.Cursos.Count();
-    ViewBag.Title = "CarrrinhoCompra";
+    ViewBag.Title = "CarrinhoCompra";
     Layout = null;
 }
 
@@ -13,7 +13,7 @@
 }
 else
 {
-    @Html.Partial("~/Views/Shared/_Header_Aluno.cshtml", Model)
+    @Html.Partial("~/Views/Shared/_Header_Aluno.cshtml", Model.curso_usuario)
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -25,9 +25,10 @@ else
     <script src="~/Scripts/scripts/script.js" defer></script>
     <title>Meu Carrinho</title>
 </head>
-
-
-<body>
+@using (Html.BeginForm("CarrrinhoCompra", "Pedidos", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(model => model.PedidoId)
+    <body>
         <div class="body-carrinho">
             <div class="conteiner-bar">
 
@@ -42,12 +43,12 @@ else
 
 
                     </div>
-                    <div class="itens-bar">
+@*                     <div class="itens-bar">
 
                         <p>Identificação</p>
                         <div data-title="login" class="bolauncheck step"></div>
 
-                    </div>
+                    </div> *@
                     <div class="itens-bar">
 
                         <p>Pagamento</p>
@@ -88,7 +89,7 @@ else
                         <p>TOTAL</p>
                         <div style="text-align: right;">
                             <p><strong>R$ @Html.DisplayFor(modalItem => Model.Valor_Total)</strong> </p>
-                            <p><span>ou 12x de x,00</span> </p>
+                            <p><span>ou 12x de x.00</span> </p>
                         </div>
                     </div>
                     <div class="flex-carrinho" style="justify-content: center;">
@@ -108,7 +109,7 @@ else
 
                 </aside>
             </div>
-            <div class="login form-step ">
+@*             <div class="login form-step ">
                 <div>
                     <div style="text-align: center;">
                         <h2>LOGIN</h2>
@@ -137,7 +138,7 @@ else
                     </div>
                 </div>
 
-            </div>
+            </div> *@
             <div class="form-step" style="flex-direction: column;">
                 <div class="pagamento ">
                     <div style="text-align: center;">
@@ -192,10 +193,12 @@ else
                     </div>
                 </div>
                 <div class="flex-carrinho" style="justify-content: center; margin-top: 5em;">
-                    <input class="btn-prev-next" style="width: 20em;" value="COMPRAR" />
+                    <input type="submit" value="COMPRAR" class="btn-prev-next" style="height: 50px;"/>
 
                 </div>
             </div>
         </div>
+        <div class="footer">@Html.Partial("~/Views/Shared/_Footer.cshtml", Model)</div>
 </body>
+}
 </html>

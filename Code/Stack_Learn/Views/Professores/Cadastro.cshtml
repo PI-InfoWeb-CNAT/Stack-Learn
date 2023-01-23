@@ -17,11 +17,11 @@
 </head>
     <body class="body">
         <header class="header">
-            <img src="~/img/logo2.svg" class="logo" />
+            <a href="/Home/PaginaInicial" class="logo"><img src="~/img/logo2.svg" class="logo"/> </a>
         </header>
-        <div class="flex">
 
-            <div class="cadastro-area">
+
+            <div class="cadastro-area" style="margin: 0 auto;">
                 <div class="cadastrotitle">
                     <figure>
                         <img src="~/img/part time student.png" />
@@ -50,7 +50,18 @@
 
                         <div class="form-group">
                             <div>
-                                @Html.LabelFor(model => model.Login, "Email", htmlAttributes: new { @class = "control-label" })
+                                @Html.LabelFor(model => model.Email, "E-mail", htmlAttributes: new { @class = "control-label" })
+                            </div>
+
+                            <div class="size-editor">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div>
+                                @Html.LabelFor(model => model.Login, "Login", htmlAttributes: new { @class = "control-label" })
                             </div>
 
                             <div class="size-editor">
@@ -65,7 +76,7 @@
                             </div>
 
                             <div class="size-editor">
-                                @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "form-control", type = "password" } })
                                 @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -110,9 +121,12 @@
                 }
 
             </div>
-            <div class="art">
-            </div>
-        </div>
+            <!--
+                    <div class="art">
+                    </div>
+    -->
+
+  
 
     </body>
 </html>

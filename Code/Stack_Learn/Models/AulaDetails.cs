@@ -15,5 +15,10 @@ namespace Stack_Learn.Models
         public List<Aula> Aulas { get; set; }
         public long? CursoId { get; set; }
         public Curso Curso { get; set; }
+        public long? ConclusaoId { get; set; }
+        public Conclusao Conclusao { get; set; }
+        public Boolean TrueFalse { get; set; }
+        public long? AlunoId { get; set; }
+        public CursosUsuarios curso_usuario { get; set; }
     }
 }

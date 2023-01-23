@@ -4,6 +4,13 @@
     margin: 0;
     padding: 0;
 }
+.footer{
+    bottom: -300px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    margin-top: 2em;    
+}
 
 .body-carrinho {
     max-width: 1024px;

@@ -14,16 +14,18 @@ namespace Stack_Learn.Controllers
     {
         private EFContext context = new EFContext();
 
-
+        [Authorize(Roles = "ADM")]
         public ActionResult Index()
         {
             return View(context.Avaliacoes.Include(c => c.Curso).Include(a=>a.Aluno).OrderBy(c => c.Nota));
         }
-
+        [Authorize(Roles = "Aluno")]
         public ActionResult Create()
         {
-            ViewBag.CursoId = new SelectList(context.Cursos.OrderBy(b => b.Nome), "CursoId", "Nome");
-            ViewBag.AlunoId = new SelectList(context.Alunos.OrderBy(b => b.Nome), "AlunoId", "Nome");
+
+            ViewBag.IdCurso = Request.QueryString["CursoId"];
+            ViewBag.IdAluno = Request.QueryString["AlunoId"];
+            ViewBag.NomeCurso = context.Cursos.OrderBy(b => b.Nome);
             return View();
         }
 
@@ -31,12 +33,35 @@ namespace Stack_Learn.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Avaliacao avaliacao)
         {
+
+            /*
             avaliacao.AlunoNome = context.Alunos.Where(a => a.AlunoId == avaliacao.AlunoId).First().Nome;//adicionar manualmente o nome do aluno, se editar não vai editar aqui também :/
+            avaliacao.Curso.Nome = context.Cursos.Where(a => a.CursoId == avaliacao.CursoId).First().Nome;//adicionar manualmente o nome do curso, objetos vem nulos
+            avaliacao.curso_usuario.AlunoId = avaliacao.AlunoId;
+            
+            if (ModelState.IsValid)
+            {
+                context.Entry(avaliacao).State = EntityState.Modified;
+                avaliacao.AlunoNome = context.Alunos.Where(a => a.AlunoId == avaliacao.AlunoId).First().Nome;//adicionar manualmente o nome do aluno, se editar não vai editar aqui também :/
+                avaliacao.Curso.Nome = context.Cursos.Where(a => a.CursoId == avaliacao.CursoId).First().Nome;//adicionar manualmente o nome do curso, objetos vem nulos
+                avaliacao.curso_usuario.AlunoId = avaliacao.AlunoId;
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            //se estiver vazio, volta de boa
+            Avaliacao avaliacaooo = context.Avaliacoes.Find(avaliacao.AvaliacaoId);
+            context.Avaliacoes.Remove(avaliacaooo);
+            context.SaveChanges();
+            return View("MeusCursosIndex");
+            */
+            avaliacao.AlunoNome = context.Alunos.Where(a => a.AlunoId == avaliacao.AlunoId).First().Nome;//adicionar manualmente o nome do aluno, se editar não vai editar aqui também :/
+            avaliacao.Data_hora = DateTime.Now;
             context.Avaliacoes.Add(avaliacao);
             context.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("../Cursos/MeusCursosIndex/" + avaliacao.AlunoId);
         }
 
+        [Authorize(Roles = "ADM")]
         public ActionResult Edit(long? id)
         {
             if (id == null)
@@ -66,7 +91,7 @@ namespace Stack_Learn.Controllers
             }
             return View(avaliacao);
         }
-
+        [Authorize(Roles = "ADM")]
         public ActionResult Details(long? id)
         {
             if (id == null)
@@ -80,7 +105,7 @@ namespace Stack_Learn.Controllers
             }
             return View(avaliacao);
         }
-
+        [Authorize(Roles = "ADM")]
         public ActionResult Delete(long? id)
         {
             if (id == null)

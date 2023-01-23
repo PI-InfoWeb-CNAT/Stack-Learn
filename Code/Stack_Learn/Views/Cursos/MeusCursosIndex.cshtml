@@ -1,4 +1,5 @@
 ﻿@model Stack_Learn.Models.MeusCursosIndex
+@using Stack_Learn.Infraestrutura
 @{
     Layout = null;
 }
@@ -8,55 +9,231 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>MeusCursosIndex</title>
+    <title>Stack Learn | Meus cursos index</title>
+    <link href="@Url.Content("~/Css/PaginasInternas.css")" rel="stylesheet" />
 </head>
 <body>
-    <h1>EM ANDAMENTO</h1>
-    @foreach (var item in Model.em_andamento)
-    {
-        <h3>@item.Nome</h3>
-
-
-        int aulasfeitas = 0;
-        int progresso = 0;
-
-
-        foreach (var subitem in item.Aulas)
-        {
-            if (subitem.TrueFalse == true)
+    <div class="panel-footer panel-info flex center color-bg">
+        <a href="/Home/PaginaInicial"> <img src="~/img/logo2.svg" /> </a>
+        <div class="flex-col center fontJost400" style="font-size: 20px;">
+            @if (Model.MeusCursosIndexId == 0)
             {
-                aulasfeitas++;
+                <a href="#" class="linkPaginas" id="aMeusCursos">Meus cursos</a>
             }
-        }
-        progresso = (aulasfeitas * 100) / item.Qtd_Aulas;
+            <a href="/Cursos/MeusCursosIndex/@Model.MeusCursosIndexId" class="linkPaginas" id="aMeusCursos">Meus cursos</a>
+            <a href="/Cursos/Lista" class="linkPaginas" id="aCursos">Cursos</a>
+            <a href="#" class="linkPaginas" id="aAssinatura">Assinatura</a>
+        </div>
+        <div class="flex-col center fontJost400">
+            <a>
+                <img src="~/img/foto_estudantefoto.svg" height="40" width="40" />
+            </a>
+            @Html.GetAuthenticatedUser().ToString().ToUpper()
+            @Html.ActionLink(" - Sair", "Logout", "Account")
+            <a>
+                <img src="~/img/carrinho.svg" height="40" width="40" />
+            </a>
+        </div>
+    </div>
 
-
-        <h3>@progresso</h3>
-
-    }
-
-    <h1>CONCLUIDO</h1>
-    @foreach (var item in Model.concluido)
-    {
-        <h3>@item.Nome</h3>
-
-
-        int aulasfeitas = 0;
-        int progresso = 0;
-
-
-        foreach (var subitem in item.Aulas)
-        {
-            if (subitem.TrueFalse == true)
+    <h1 class="fontJost400" style="background-color:#FFCC36; margin-top:0px; font-size:22px; text-align:center; padding: 1.5em; ">EXPLORAR CURSOS</h1>
+    <div class="part1 flex-column " style="padding: 1em; flex-wrap: wrap; width: 100%; width: 50%; margin: 0 auto;">
+        <h1 class="fontJost400" style="font-size: 26px; font-weight: 500; margin: 0px 0px 10px 0px;text-align: left;">EM ANDAMENTO</h1>
+        <div class="flex-col " style="flex-wrap: wrap;">
+            @foreach (var item in Model.em_andamento)
             {
-                aulasfeitas++;
+                <div class="card part1 flex-col" style="
+            border: 3px solid transparent;
+            box-shadow: 2px 1000px 1px #ffff inset;
+            background-image: linear-gradient(to right, #70D7C7, #FFCB34);
+            color: black;
+            margin: 12px 20px 0px 0px;
+            padding: 16px;
+">
+                    @{
+                        int aulasfeitas = 0;
+                        int progresso = 0;
+
+
+                        foreach (var subitem in item.Aulas)
+                        {
+                            if (subitem.TrueFalse == true)
+                            {
+                                aulasfeitas++;
+                            }
+                        }
+                        progresso = (aulasfeitas * 100) / item.Qtd_Aulas;
+
+                        int tamanho = item.Categoria.Nome.Length;
+                        <div class="esquerda flex-column">
+                            <a style="
+                        font-family:'Jost';
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 300;
+                        text-decoration: none;
+                        border: 1px solid #ECE8EF;
+                        border-radius: 5px;
+                        color: black;
+                        width: calc(10px*@tamanho);">@item.Categoria.Nome.ToUpper()</a>
+                        <h3 style="font-family:'Jost'; font-size: 16px;">@item.Nome</h3>
+                        @Html.HiddenFor(m => item.LogotipoMimeType)
+                        @Html.HiddenFor(m => item.Logotipo)
+                        @Html.HiddenFor(m => item.NomeArquivo)
+                        @Html.HiddenFor(m => item.TamanhoArquivo)
+                        <img src="@Url.Action("GetLogotipo", "Cursos", new { id = item.CursoId })" width="150" height="80" />
+
+
+
+
+                    </div>
+
+
+                    <div class="direita flex-column" style="
+                align-items:center;
+                justify-content: flex-end;
+                margin-left: 10px;
+
+                   ">
+                        <h4 style="
+                    border-radius: 1000%;
+                    background-color:#70D7C7;
+                    padding: 8px;
+                    font-family: 'Jost';
+                    font-size:16px;
+                    ">
+                            @progresso%
+                        </h4>
+
+
+                        @foreach (var subitem in item.Aulas)
+                        {
+                            long? AulaaId = 0;
+                            if (subitem.CursoId == item.CursoId && subitem.AlunoId == Model.MeusCursosIndexId)
+                            {
+                                AulaaId = subitem.AulaId;
+                                <h4 style="
+                        background-color:#FFCC36;
+                        padding: 10px;
+                        font-family: 'Jost';
+                        color: black;
+                        font-size: 16px;
+                        margin: 0px;
+                        border-radius: 5px;
+                        ">
+                                    <a href="/Aulas/AulaIndividual/@AulaaId" style="color:black;">Continuar Aulas</a>
+
+                                </h4>
+                                break;
+                            }
+
+                        }
+                    </div>
+
+                    }
+
+                </div>
             }
-        }
-        progresso = (aulasfeitas * 100) / item.Qtd_Aulas;
+
+        </div>
+    </div>
+
+    <div class="outside part 2" style=" background-color: #515352">
+        <div class="button-wrap flex-col space-between" style="z-index: 10; padding: 10px 400px; top: 300px; position: relative">
+            <button class="arrow text" id="arrow-left" onclick="slideLeft()" style="background: #515352; border: none;">
+                <span style="
+            color: white;
+            font-size: 40px;
+            ">&#10094;</span>
+            </button>
+            <button class="arrow" id="arrow-right" onclick="slideRight()" style="background: #515352; border: none;">
+                <span style="
+            color: white;
+            font-size: 40px;">&#10095;</span>
+            </button>
+        </div>
+        <div class="part 2 flex-column" style="background-color:#515352;padding: 1em; flex-wrap: wrap; width: 50%; margin: 0 auto;">
+            <h1 class="fontJost400" style="font-size: 26px;color: white; margin: 0px 0px 15px 0px;">CONCLUIDO</h1>
+
+            <div class="carrosel flex-col" style="flex-wrap: wrap; overflow: hidden; height: 442px;">
+
+
+                @foreach (var item in Model.concluido)
+                {
+                    <div class=" slide" style="width: 100%;">
+                        <div class=" card part 2 flex-col space-between" style="
+                border: 1px solid transparent;
+                box-shadow: 2px 1000px 1px #ffff inset;
+                background-image: linear-gradient(to right, #70D7C7, #FFCB34);
+                color: black;
+                padding: 1em;
+                width: 100%;
+
+                ">
+
+                            <div class="esquerda flex-column" style="margin-left: 12px;">
+                                <div class="esquerda top" style="
+                            width: 200px;
+                            font-family:'Jost';
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 300;
+                            text-decoration: none;
+                            border: 1px solid #ECE8EF;
+                            border-radius: 5px;
+                            color: black;
+                            text-align:center;
+                            margin-bottom: 15px;
+                            ">
+                                    @item.Categoria.Nome.ToUpper()
+                                </div>
+                                <div class="esquerda bottom flex-col">
+                                    <div class="imagem esquerda bottom">
+                                        @Html.HiddenFor(m => item.LogotipoMimeType)
+                                        @Html.HiddenFor(m => item.Logotipo)
+                                        @Html.HiddenFor(m => item.NomeArquivo)
+                                        @Html.HiddenFor(m => item.TamanhoArquivo)
+                                        <img src="@Url.Action("GetLogotipo", "Cursos", new { id = item.CursoId })" width="200" height="150" />
+                                    </div>
+                                    <div class="texto esquerda bottom" style="margin-left: 15px;">
+                                        <h3 style="font-family:'Jost'; font-size: 20px; font-weight: 600; margin: 0px 0px 5px 0px;">@item.Nome</h3>
+                                        <h4 style="font-family:'Jost'; font-size: 16px; font-weight: 400; margin: 0px;">feito por @item.Professor.Nome</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="direita" style="position:relative;">
+                                @*<a href="/Avaliacoes/Create?AlunoId=@Model.MeusCursosIndexId?CursoId=@item.CursoId"> AVALIE</a>*@
+                                <a href="@Url.Action("Create", "Avaliacoes", new { AlunoId = Model.MeusCursosIndexId, CursoId = item.CursoId})" style="
+                            background-color: #FFEB82;
+                            color: black;
+                            font-weight: 600;
+                            padding: 10px 1.6em;
+                            top: 35%;
+                            right: 10%;
+                            position: absolute;
+                            border-radius: 10px;
+                            margin-right: 40px;
+                            font-family: 'Jost';
+                            font-size: 18px;
+                            "> AVALIE</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                }
+
+            </div>
 
 
 
 
-    }
+        </div>
+
+    </div>
+    @Html.Partial("~/Views/Shared/_Footer.cshtml", Model)
+    <script src="~/Scripts/scripts/slider.js"></script>
 </body>
 </html>
