@@ -83,7 +83,7 @@ namespace Stack_Learn.Controllers
                 context.SaveChanges();
 
                 if (result.Succeeded)
-                { return RedirectToAction("Index"); }
+                { return RedirectToAction("../Home/PaginaInicial"); }
                 else
                 {
                     AddErrorsFromResult(result);
